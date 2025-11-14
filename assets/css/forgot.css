@@ -1,0 +1,26 @@
+.body_img {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPBuxmi4ZuZtcqpZC0ipa-5mwlpJbXmDQotQ&s');
+    background-size: 70%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_home button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin-top: 390px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 5px 7px 15px black;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn_home button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

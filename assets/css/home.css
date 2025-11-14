@@ -1,0 +1,148 @@
+.carousel-inner {
+    width: 100%;
+    height: 60vh; 
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.container_colunas {
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.container_colunas h4{
+  font-size: 3rem;
+  text-align: center;
+  margin: 50px;
+}
+
+.row_colunas {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.colunas {
+  flex: 1;
+}
+
+.colunas img {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.colunas.texto {
+  max-width: 400px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.parallax-section {
+  background-image: url('https://static.vecteezy.com/ti/fotos-gratis/t1/23977547-frente-visao-sombrio-silhueta-do-uma-moderno-luxo-preto-carro-isolado-em-preto-fundo-ai-gerado-gratis-foto.jpg'); /* ou outra imagem */
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more_car {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.more_car img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  height: auto;
+}
+
+.texto_botao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  max-width: 600px;
+  margin-left: 180px;
+}
+
+.btn-contato {
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  background-color: #ffd700;
+  color: white;
+  border: 3px solid rgb(221, 221, 32);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 7px 15px rgba(0,0,0,0.3);
+  
+}
+
+.btn-contato:hover {
+  background-color: #f6dd4c;
+  box-shadow: none;
+}
+
+.div_h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background-color: #2f2a2a;
+    color: #ca0002;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.marcas img {
+  max-height: 60px;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+.marcas img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.marcas-logos {
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .more_car {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .more_car img {
+    max-width: 90%;
+  }
+
+  .texto_botao {
+    align-items: center;
+  }
+}

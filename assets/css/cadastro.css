@@ -1,0 +1,95 @@
+main {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.main_cadastro{
+    background: url("https://uploads.automaistv.com.br/2024/04/mercedes-amg-gt-63-s-e-performance-1.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.form_container {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.40);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form_container h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 3px #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+form input{
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.cadastro_btn{
+    margin-top: 15px;
+    display: flex;
+    gap: 50%;
+}
+
+.cadastro_btn button{
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s;
+    box-shadow: 3px 3px 7px black;
+}
+
+.cadastro_btn button:hover{
+    background-color: #0056b3;
+    box-shadow: none;
+}
+
+.cadastro_btn .btn_voltar{
+  background-color: #fff;
+  color: red;
+  border: 1px solid red;
+  box-shadow: none;
+}
+
+.cadastro_btn .btn_voltar:hover {
+  background-color: rgb(172, 52, 52);
+  color: #fff;
+}
+
+.termos-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+.termos-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
