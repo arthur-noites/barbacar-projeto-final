@@ -13,7 +13,7 @@
                     <div class="icones">
                         <a href="#" class="btn-footer degrade"><i class="bi bi-envelope-fill"></i></a>
                         <a href="#" class="btn-footer degrade"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn-footer degrade"><i class="bi bi-github"></i></a>
+                        <a href="https://github.com/arthur-noites/barbacar-projeto-final" class="btn-footer degrade"><i class="bi bi-github"></i></a>
                     </div>
                     </div>
                 </div>
