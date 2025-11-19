@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="assets/images/logo.jpeg">
-    <title>Home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
-</head>
-<body>
-    <header class="header">
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo_nome.png" alt="Logo BarbaCar">
-            </a>
-            <div class="toggle" id="menu-toggle">☰</div>
-            <div class="menu">
-                <a href="products.html">Veículos</a>
-                <a href="login.html">Login</a>
-            </div>
-        </nav>
-    </header>
-    <main>
+<?php
+  include_once 'topo.php';
+?>
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -88,7 +65,7 @@
         <div class="more_car">
             <div class="texto_botao">
                 <p>"Mais do que locomoção, prazer ao dirigir."</p>
-                <a href="links.html"><button class="btn-contato">Entrar em Contato</button></a>
+                <a href="links.php"><button class="btn-contato">Entrar em Contato</button></a>
             </div>
             <img src="https://cdn.autopapo.com.br/box/uploads/2023/12/11161337/volkswagen-fusca-azul-foto.png" alt="Fusca">
         </div>
@@ -115,33 +92,4 @@
             </div>
         </section>
     </main>
-        <footer>
-            <div class="container">
-                <div class="footer-top">
-                    <a href="index.html">
-                        <img src="assets/images/logo_nome.png" alt="logo empresa">
-                    </a>
-                    <div class="footer-content">
-                    <section class="botoes-links">
-                        <a href="#" class="link"><button class="degrade"><span>Instagram</span> <i class="bi bi-instagram"></i></button></a>
-                        <a href="#" class="link"><button class="degrade"><span>Facebook</span> <i class="bi bi-facebook"></i></button></a>
-                        <a href="#" class="link"><button class="degrade"><span>Whatsapp</span> <i class="bi bi-whatsapp"></i></button></a>
-                    </section>
-                    <div class="icones">
-                        <a href="#" class="btn-footer degrade"><i class="bi bi-envelope-fill"></i></a>
-                        <a href="#" class="btn-footer degrade"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn-footer degrade"><i class="bi bi-github"></i></a>
-                    </div>
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <p>&copy; BarbaCar - 2025 | A sua revenda em Sobrado/PB</p>
-                    <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LGPD</a>
-                </div>
-            </div>
-        </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-        <script src="assets/js/script.js"></script>
-</body>
-</html>
+        <?php include_once 'rodape.php'; ?>

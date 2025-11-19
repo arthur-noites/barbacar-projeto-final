@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image" href="assets/images/logo.jpeg">
-  <title>Produtos - BarbaCar</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/products.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-<body>
-  <header class="header">
-    <nav>
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo_nome.png" alt="Logo BarbaCar">
-      </a>
-      <div class="toggle" id="menu-toggle">☰</div>
-      <div class="menu">
-        <a href="products.html">Veículos</a>
-        <a href="login.html">Login</a>
-      </div>
-    </nav>
-  </header>
+<?php include_once 'topo.php'; ?>
+<link rel="stylesheet" href="assets/css/products.css">
 
   <main class="py-4">
     <div class="container">
@@ -44,7 +21,7 @@
                 <p class="card-text">2.8 D-4D TURBO DIESEL DIAMOND 7L 4X4 AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$327.900</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -63,7 +40,7 @@
                 <p class="card-text">2.0 LXR 16V FLEX 4P AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$73.000</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -82,7 +59,7 @@
                 <p class="card-text">44,9 KW ELÉTRICO</p>
                 <div class="mt-auto">
                   <p class="price">R$119.800</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -101,7 +78,7 @@
                 <p class="card-text">4.8 V8 TURBO GASOLINA 4P AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$280.000</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -120,7 +97,7 @@
                 <p class="card-text">1.0 TURBO FLEX LTZ AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$97.500</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -139,7 +116,7 @@
                 <p class="card-text">3.0 V6 TDI DIESEL HIGHLINE EXTREME CD 4MOTION AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$234.000</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -158,7 +135,7 @@
                 <p class="card-text">3.9 V8 TURBO GASOLINA F1-DCT</p>
                 <div class="mt-auto">
                   <p class="price">R$4.199.990</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -177,7 +154,7 @@
                 <p class="card-text">2.0 16V TURBO DIESEL RANCH 4WD AT9</p>
                 <div class="mt-auto">
                   <p class="price">R$128.950</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -196,7 +173,7 @@
                 <p class="card-text">5.0 V8 GASOLINA LIMOUSINE 4P AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$399.000</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -215,7 +192,7 @@
                 <p class="card-text">1.0 TGDI FLEX COMFORT PLUS AUTOMÁTICO</p>
                 <div class="mt-auto">
                   <p class="price">R$94.290</p>
-                  <a href="links.html" class="btn btn-primary">Comprar</a>
+                  <a href="links.php" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
             </div>
@@ -234,7 +211,7 @@
         <p class="card-text">2.0 16V TURBO FLEX M SPORT AUTOMÁTICO</p>
         <div class="mt-auto">
           <p class="price">R$289.900</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -253,7 +230,7 @@
         <p class="card-text">1.5 DM-I HÍBRIDO AUTOMÁTICO</p>
         <div class="mt-auto">
           <p class="price">R$244.800</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -272,7 +249,7 @@
         <p class="card-text">636cc, 4 CILINDROS, DOHC, 4 TEMPOS, REFRIGERADA A LÍQUIDO</p>
         <div class="mt-auto">
           <p class="price">R$74.990</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -291,7 +268,7 @@
         <p class="card-text">MOTOR 1000cc</p>
         <div class="mt-auto">
           <p class="price">R$46.990</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -311,7 +288,7 @@
         <p class="card-text">MOTOR 471 cm³, 50,2 CV, ATÉ 185 km/h</p>
         <div class="mt-auto">
           <p class="price">R$44.990</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -330,7 +307,7 @@
         <p class="card-text">MOTOR 321 cm³, 2 CILINDROS, ATÉ 180 km/h</p>
         <div class="mt-auto">
           <p class="price">R$27.990</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -349,7 +326,7 @@
         <p class="card-text">MOTOR 249,5 cm³, KGFM A 6.500 RPM, CÂMBIO 5 MARCHAS</p>
         <div class="mt-auto">
           <p class="price">R$23.590</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -368,7 +345,7 @@
         <p class="card-text">Animal treinado, bonito e saudável</p>
         <div class="mt-auto">
           <p class="price">R$6.000</p>
-          <a href="links.html" class="btn btn-primary">Comprar</a>
+          <a href="links.php" class="btn btn-primary">Comprar</a>
         </div>
       </div>
     </div>
@@ -377,33 +354,4 @@
 
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <a href="index.html">
-          <img src="assets/images/logo_nome.png" alt="logo empresa">
-        </a>
-        <div class="footer-content">
-          <section class="botoes-links">
-            <a href="#" class="link"><button class="degrade"><span>Instagram</span> <i class="bi bi-instagram"></i></button></a>
-            <a href="#" class="link"><button class="degrade"><span>Facebook</span> <i class="bi bi-facebook"></i></button></a>
-            <a href="#" class="link"><button class="degrade"><span>Whatsapp</span> <i class="bi bi-whatsapp"></i></button></a>
-          </section>
-          <div class="icones">
-            <a href="#" class="btn-footer degrade"><i class="bi bi-envelope-fill"></i></a>
-            <a href="#" class="btn-footer degrade"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="btn-footer degrade"><i class="bi bi-github"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer_bottom">
-        <p>&copy; BarbaCar - 2025 | A sua revenda em Sobrado/PB</p>
-        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LGPD</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  <script src="assets/js/script.js"></script>
-</body>
-</html>
+ <?php include_once 'rodape.php'; ?>

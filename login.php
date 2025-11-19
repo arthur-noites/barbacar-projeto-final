@@ -12,13 +12,13 @@
   <body>
     <header class="header">
       <nav>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
           <img src="assets/images/logo_nome.png" alt="Logo BarbaCar" />
         </a>
         <div class="toggle" id="menu-toggle">☰</div>
         <div class="menu">
-            <a href="products.html">Veículos</a>
-          <a href="login.html">Login</a>
+            <a href="products.php">Veículos</a>
+          <a href="login.php">Login</a>
         </div>
       </nav>
     </header>
@@ -26,7 +26,7 @@
     <main class="main_login">
       <section id="login_Container">
         <h1>Login</h1>
-        <form action="index.html" method="post">
+        <form action="" method="post">
           <div class="sub_form">
             <label for="Nome">Nome</label>
             <input type="text" name="Nome" required placeholder="Nome" />
@@ -40,8 +40,8 @@
         </form>
 
         <div class="login_links">
-          <a href="forgot.html">Esqueci a senha</a>
-          <a href="cadastro.html">Cadastrar</a>
+          <a href="forgot.php">Esqueci a senha</a>
+          <a href="cadastro.php">Cadastrar</a>
         </div>
       </section>
     </main>

@@ -11,7 +11,7 @@
   </head>
   <body class="body_img">
     <main>
-        <a href="login.html" class="btn_home" ><button>Voltar</button></a>
+        <a href="login.php" class="btn_home" ><button>Voltar</button></a>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>

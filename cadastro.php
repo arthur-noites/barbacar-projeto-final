@@ -12,20 +12,20 @@
   <body>
     <header class="header">
       <nav>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
           <img src="assets/images/logo_nome.png" alt="Logo BarbaCar" />
         </a>
         <div class="toggle" id="menu-toggle">☰</div>
         <div class="menu">
-          <a href="products.html">Veículos</a>
-          <a href="login.html">Login</a>
+          <a href="products.php">Veículos</a>
+          <a href="login.php">Login</a>
         </div>
       </nav>
     </header>
     <main class="main_cadastro">
       <section class="form_container">
         <h1>Cadastrar</h1>
-        <form method="post" action="index.html">
+        <form method="post" action="index.php">
           <label for="name">Nome</label>
           <input type="text" name="Nome" required placeholder="Nome Sobrenome"/>
           <label for="email">Email</label>
@@ -43,7 +43,7 @@
             <label for="check">Aceito os termos</label>
           </div>
           <div class="cadastro_btn">
-            <button class="btn_voltar" onclick="location.href='index.html'">Voltar</button>
+            <button class="btn_voltar" onclick="location.href='index.php'">Voltar</button>
             <button type="submit">Cadastrar</button>
           </div>
         </section>
