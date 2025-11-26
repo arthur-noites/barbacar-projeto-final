@@ -1,357 +1,60 @@
 <?php include_once 'topo.php'; ?>
+
 <link rel="stylesheet" href="assets/css/products.css">
 
-  <main class="py-4">
+<main class="py-4">
     <div class="container">
-      <div class="page-header">
-        <h1 class="page-title">Catálogo</h1>
-        <p class="page-subtitle">Seu próximo carro a um clique de distância!</p>
-      </div>
-      
-      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-        <!-- Carro 1 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202505/20250513/toyota-hilux-sw4-2-8-d4d-turbo-diesel-srx-7l-4x4-automatico-wmimagem18384944732.webp?s=fill&w=1920&h=1440&q=75" class="card-img-top" alt="Toyota Hilux SW4">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Toyota Hilux SW4 2022</h5>
-                <p class="card-text">2.8 D-4D TURBO DIESEL DIAMOND 7L 4X4 AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$327.900</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         
-        <!-- Carro 2 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202408/20240830/honda-civic-2.0-lxr-16v-flex-4p-automatico-wmimagem11500958294.jpg?s=fill&w=1920&h=1440&q=75" class="card-img-top" alt="Honda Civic">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Honda Civic 2014</h5>
-                <p class="card-text">2.0 LXR 16V FLEX 4P AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$73.000</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Nossos Veículos</h2>
+            <p class="text-muted">Confira as melhores ofertas do BarbaCar</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+            
+            <?php
+            require_once 'admin/config.inc.php';
+            
+            $sql = "SELECT * FROM veiculos";
+            $resultado = mysqli_query($conexao, $sql);
+
+            if (mysqli_num_rows($resultado) > 0) {
+                
+                while($carro = mysqli_fetch_array($resultado)) {
+            ?>
+            
+            <div class="col">
+                <div class="card-container"> <div class="card h-100 shadow-sm">
+                        
+                        <div class="ratio ratio-4x3"> <?php 
+                                $foto = !empty($carro['foto']) ? $carro['foto'] : 'assets/images/logo.jpeg'; 
+                            ?>
+                            <img src="<?=$foto?>" class="card-img-top object-fit-cover" alt="<?=$carro['modelo']?>">
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold"><?=$carro['modelo']?></h5>
+                            <p class="card-text text-muted small mb-2"><?=$carro['marca']?> • <?=$carro['ano']?></p>
+                            
+                            <div class="mt-auto">
+                                <p class="price fs-5 fw-bold text-success mb-2">R$ <?=number_format($carro['preco'], 2, ',', '.')?></p>
+                                <a href="links.php" class="btn btn-primary w-100">Ver Detalhes</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-        
-        <!-- Carro 3 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202505/20250516/byd-dolphin-44.9-kw-eletrico-wmimagem15261281150.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="BYD Dolphin">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">BYD Dolphin 2024</h5>
-                <p class="card-text">44,9 KW ELÉTRICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$119.800</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 4 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250415/porsche-panamera-4.8-v8-turbo-gasolina-4p-automatico-wmimagem09424959585.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Porsche Panamera">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Porsche Panamera 2011</h5>
-                <p class="card-text">4.8 V8 TURBO GASOLINA 4P AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$280.000</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 5 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202505/20250515/chevrolet-tracker-1.0-turbo-flex-ltz-automatico-wmimagem2224008063.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Chevrolet Tracker">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Chevrolet Tracker 2022</h5>
-                <p class="card-text">1.0 TURBO FLEX LTZ AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$97.500</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 6 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202505/20250514/volkswagen-amarok-3-0-v6-tdi-diesel-highline-extreme-cd-4motion-automatico-wmimagem01022785911.webp?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Volkswagen Amarok">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Volkswagen Amarok 2025</h5>
-                <p class="card-text">3.0 V6 TDI DIESEL HIGHLINE EXTREME CD 4MOTION AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$234.000</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 7 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202412/20241216/ferrari-f8-tributo-3.9-v8-turbo-gasolina-f1dct-wmimagem17124278686.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Ferrari F8 Tributo">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Ferrari F8 Tributo 2024</h5>
-                <p class="card-text">3.9 V8 TURBO GASOLINA F1-DCT</p>
-                <div class="mt-auto">
-                  <p class="price">R$4.199.990</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 8 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250429/fiat-toro-2.0-16v-turbo-diesel-ranch-4wd-at9-wmimagem22480641489.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Fiat Toro">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Fiat Toro 2022</h5>
-                <p class="card-text">2.0 16V TURBO DIESEL RANCH 4WD AT9</p>
-                <div class="mt-auto">
-                  <p class="price">R$128.950</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 9 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202501/20250115/cadillac-brougham-5-0-v8-gasolina-limousine-4p-automatico-wmimagem19164316137.webp?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Cadillac Brougham">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">CADILLAC BROUGHAM 1988</h5>
-                <p class="card-text">5.0 V8 GASOLINA LIMOUSINE 4P AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$399.000</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Carro 10 -->
-        <div class="col">
-          <div class="card-container">
-            <div class="card h-100">
-              <div class="card-img-container">
-                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202505/20250521/hyundai-hb20s-1.0-tgdi-flex-comfort-plus-automatico-wmimagem09074507011.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Hyundai HB20S">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">HYUNDAI HB20S 2023</h5>
-                <p class="card-text">1.0 TGDI FLEX COMFORT PLUS AUTOMÁTICO</p>
-                <div class="mt-auto">
-                  <p class="price">R$94.290</p>
-                  <a href="links.php" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-<!-- carro 11 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202501/20250117/bmw-320i-2-0-16v-turbo-flex-m-sport-automatico-wmimagem12372912618.webp?s=fill&w=552&h=414&q=60" class="card-img-top" alt="BMW 320i">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">BMW 320i 2023</h5>
-        <p class="card-text">2.0 16V TURBO FLEX M SPORT AUTOMÁTICO</p>
-        <div class="mt-auto">
-          <p class="price">R$289.900</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- carro 12 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250417/byd-song-plus-1-5-dmi-hibrido-automatico-wmimagem14301485920.webp?s=fill&w=552&h=414&q=60" class="card-img-top" alt="BYD Song Plus">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">BYD SONG PLUS</h5>
-        <p class="card-text">1.5 DM-I HÍBRIDO AUTOMÁTICO</p>
-        <div class="mt-auto">
-          <p class="price">R$244.800</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <?php 
+                } 
+            } else {
+                
+                echo "<div class='col-12'><p class='alert alert-warning text-center'>Nenhum veículo encontrado no estoque.</p></div>";
+            }
+            ?>
 
-<!-- carro 13 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/25MY_Ninja_ZX-6R_GN1_ACT__8_.jpg" class="card-img-top" alt="KAWASAKI NINJA">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">KAWASAKI NINJA ZX-6R 636 2025</h5>
-        <p class="card-text">636cc, 4 CILINDROS, DOHC, 4 TEMPOS, REFRIGERADA A LÍQUIDO</p>
-        <div class="mt-auto">
-          <p class="price">R$74.990</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </div> </div>
+</main>
 
-<!-- carro 14 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202505/20250521/honda-cb-1000r-wmimagem10565028792.jpg?s=fill&w=552&h=414&q=60" class="card-img-top" alt="Honda CB 1000R">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">HONDA CB 1000R 2012</h5>
-        <p class="card-text">MOTOR 1000cc</p>
-        <div class="mt-auto">
-          <p class="price">R$46.990</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- carro 15 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbsHS7mJ3uF-aDkhljBVb9Mq__JW_eHJq6MtsEJY2WBV-CaTGJaSIZ9PNwZQkOs5K8zg8u536dwCcAToXUHyaexK_wUWT-lvpGDEL-c4iobixHX1fDueel9RF4WmXSVVYy0r1e20-1YbS5QhrM7GfDSUfwU5Qzx7R1Zv6lQky3qVz1FUTaPca9l7HnxA/s2560/Honda%20CB%20500F_2023_EST%C3%81TICA_%20(12).jpg" class="card-img-top" alt="HONDA CB 500F">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">HONDA CB 500F 2023</h5>
-        <p class="card-text">MOTOR 471 cm³, 50,2 CV, ATÉ 185 km/h</p>
-        <div class="mt-auto">
-          <p class="price">R$44.990</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- carro 16 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://th.bing.com/th/id/OIP.ZaF3VfNbqNm3XW2oohF1uQHaFj?rs=1&pid=ImgDetMain" class="card-img-top" alt="YAMAHA MT-03 2020">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">YAMAHA MT-03 2020</h5>
-        <p class="card-text">MOTOR 321 cm³, 2 CILINDROS, ATÉ 180 km/h</p>
-        <div class="mt-auto">
-          <p class="price">R$27.990</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- carro 17 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://th.bing.com/th/id/OIP.xDwRg3c2QwADJHqq_QRQeQHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="YAMAHA LANDER 250">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">YAMAHA LANDER 250 ABS 2023</h5>
-        <p class="card-text">MOTOR 249,5 cm³, KGFM A 6.500 RPM, CÂMBIO 5 MARCHAS</p>
-        <div class="mt-auto">
-          <p class="price">R$23.590</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- carro 16 -->
-<div class="col">
-  <div class="card-container">
-    <div class="card h-100">
-      <div class="card-img-container">
-        <img src="https://img.olx.com.br/images/83/839577640700738.webp" class="card-img-top" alt="Cavalo Alazão">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Cavalo Alazão Documentado</h5>
-        <p class="card-text">Animal treinado, bonito e saudável</p>
-        <div class="mt-auto">
-          <p class="price">R$6.000</p>
-          <a href="links.php" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  </main>
-
- <?php include_once 'rodape.php'; ?>
+<?php include_once 'rodape.php'; ?>
