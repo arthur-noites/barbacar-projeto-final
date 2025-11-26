@@ -16,7 +16,7 @@ body {
 
 .card-container:hover {
     z-index: 100; 
-    transform: scale(1.05); 
+    transform: scale(0.5); 
 }
 
 .card {

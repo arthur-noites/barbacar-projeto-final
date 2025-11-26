@@ -47,7 +47,7 @@
                 <img src="https://cdn.autopapo.com.br/box/uploads/2020/06/06214048/gurgel-supermini.jpg" alt="Carro Gurgel" class="img-fluid rounded">
             </div>
             <div class="colunas">
-                <img src="https://revistacarro.com.br/wp-content/uploads/2019/02/Kadette-1.jpg" alt="Kadett" class="img-fluid rounded">
+                <img src="https://autoentusiastas.com.br/ae/wp-content/uploads/2019/03/Kadett-GSi.jpeg" alt="Kadett" class="img-fluid rounded">
             </div>
             <div class="colunas texto">
                 <p>
