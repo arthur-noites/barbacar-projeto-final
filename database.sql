@@ -8,7 +8,18 @@ CREATE TABLE usuarios (
 
 
 INSERT INTO usuarios (nome, email, senha) VALUES 
-('Admin', 'admin@barbacar.com', '$2y$10$K.XjW1/..hash..exemplo'); 
+('Admin', 'admin@barbacar.com', '12345'); 
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    telefone VARCHAR(20),
+    endereco TEXT,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO clientes (nome, email, telefone, endereco) VALUES
 
 
 
