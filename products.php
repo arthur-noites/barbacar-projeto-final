@@ -24,9 +24,11 @@
             ?>
             
             <div class="col">
-                <div class="card-container"> <div class="card h-100 shadow-sm">
+                <div class="card-container">
+                    <div class="card h-100 shadow-sm">
                         
-                        <div class="ratio ratio-4x3"> <?php 
+                        <div class="ratio ratio-4x3"> 
+                            <?php 
                                 $foto = !empty($carro['foto']) ? $carro['foto'] : 'assets/images/logo.jpeg'; 
                             ?>
                             <img src="<?=$foto?>" class="card-img-top object-fit-cover" alt="<?=$carro['modelo']?>">
@@ -49,12 +51,12 @@
             <?php 
                 } 
             } else {
-                
                 echo "<div class='col-12'><p class='alert alert-warning text-center'>Nenhum veículo encontrado no estoque.</p></div>";
             }
             ?>
 
-        </div> </div>
+        </div> 
+    </div>
 </main>
 
 <?php include_once 'rodape.php'; ?>
