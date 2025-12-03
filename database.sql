@@ -1,14 +1,9 @@
-
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
 );
-
-
-INSERT INTO usuarios (nome, email, senha) VALUES 
-('Admin', 'admin@barbacar.com', '12345'); 
 
 CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -19,10 +14,6 @@ CREATE TABLE clientes (
     data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO clientes (nome, email, telefone, endereco) VALUES
-
-
-
 CREATE TABLE veiculos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     modelo VARCHAR(100) NOT NULL,
@@ -30,7 +21,7 @@ CREATE TABLE veiculos (
     ano INT NOT NULL,
     preco DECIMAL(10, 2) NOT NULL,
     descricao TEXT,
-    foto VARCHAR(255) 
+    foto VARCHAR(255)
 );
 
 INSERT INTO veiculos (modelo, marca, ano, preco, descricao, foto) VALUES
