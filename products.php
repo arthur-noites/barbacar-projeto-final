@@ -7,7 +7,7 @@
         
         <div class="text-center mb-5">
             <h2 class="fw-bold">Nossos Veículos</h2>
-            <p class="text-muted">Confira as melhores ofertas do BarbaCAR</p>
+            <p class="text-muted">Confira as melhores ofertas do barbacar</p>
         </div>
 
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
