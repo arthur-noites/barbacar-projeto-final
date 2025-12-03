@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $host = 'localhost';
   $usuario_db = 'root';
   $senha_db = '';
-  $banco = 'nome_do_seu_banco';
+  $banco = 'barbacar';
 
   $conn = new mysqli($host, $usuario_db, $senha_db, $banco);
 
