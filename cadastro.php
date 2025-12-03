@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $senha_db = '';
   $banco = 'barbacar';
 
-  $conn = new mysqli($host, $usuario_db, $senha_db, $banco);
+require_once 'admin/config.inc.php';
 
   if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO usuarios (nome, email, numero, cpf, senha) VALUES (?, ?, ?, ?, ?)";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $conexao->prepare($sql);
 
     if ($stmt) {
       $stmt->bind_param("sssss", $nome, $email, $numero, $cpf, $senhaHash);
