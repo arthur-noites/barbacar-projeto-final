@@ -1,6 +1,6 @@
 <?php 
     
-require_once "admin/config.inc.php";
+require_once "config.inc.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     

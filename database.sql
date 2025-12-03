@@ -24,6 +24,6 @@ CREATE TABLE veiculos (
     foto VARCHAR(255)
 );
 
-INSERT INTO veiculos (modelo, marca, ano, preco, descricao, foto) VALUES
+INSERT INTO veiculos (id, modelo, marca, ano, preco, descricao, foto) VALUES
 ('Ferrari F430', 'Ferrari', 2007, 850000.00, 'Motor V8 4.3 Litros, impecável.', 'assets/images/ferrari.jpg'),
 ('Kadett GS', 'Chevrolet', 1991, 35000.00, 'Clássico nacional, motor 2.0.', 'assets/images/kadett.jpg');

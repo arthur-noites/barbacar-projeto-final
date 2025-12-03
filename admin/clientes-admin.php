@@ -14,8 +14,10 @@
         while($dados = mysqli_fetch_array($resultado)) {
             echo "ID: " . $dados['id'] . "<br>";
             echo "Nome: " . $dados['cliente'] . "<br>";
-            echo "Cidade: " . $dados['cidade'] . "<br>";
-            echo "Estado: " . $dados['estado'] . "<br>";
+            echo "Email: " . $dados['email'] . "<br>";
+            echo "Número: " . $dados['numero'] . "<br>";
+            echo "CPF: " . $dados['cpf'] . "<br>";
+            echo "Senha: " . $dados['senha'] . "<br>";
             echo "<a href= '?pg=clientes-form-alterar&id=$dados[id]'>Editar</a>";
 
             echo "<hr>";

@@ -9,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $senha_db = '';
   $banco = 'barbacar';
 
-  $conn = new mysqli($host, $usuario_db, $senha_db, $banco);
+  require_once 'admin/config.inc.php';
 
-  if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+  if ($conexao->connect_error) {
+    die("Falha na conexão: " . $conexao->connect_error);
   }
 
   $nome = $_POST['Nome'];
@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $numero = $_POST['numero'];
   $cpf = $_POST['cpf'];
   $senha = $_POST['Senha'];
-  $confirmSenha = $_POST['ConfirmSenha'];
 
   if ($senha !== $confirmSenha) {
     $msg_erro = "As senhas não coincidem!";
@@ -29,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO usuarios (nome, email, numero, cpf, senha) VALUES (?, ?, ?, ?, ?)";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $conexao->prepare($sql);
 
     if ($stmt) {
       $stmt->bind_param("sssss", $nome, $email, $numero, $cpf, $senhaHash);
@@ -37,14 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if ($stmt->execute()) {
         $msg_sucesso = "Cadastro realizado com sucesso! <a href='login.php'>Faça Login</a>";
       } else {
-        $msg_erro = "Erro ao cadastrar: " . $conn->error;
+        $msg_erro = "Erro ao cadastrar: " . $conexao->error;
       }
       $stmt->close();
     } else {
-      $msg_erro = "Erro na preparação da query: " . $conn->error;
+      $msg_erro = "Erro na preparação da query: " . $conexao->error;
     }
   }
-  $conn->close();
+  $conexao->close();
 }
 ?>
 
@@ -128,9 +127,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="password">Senha</label>
         <input type="password" name="Senha" required placeholder="******" />
-
-        <label for="confirmPswd">Confirme a Senha</label>
-        <input type="password" name="ConfirmSenha" required placeholder="******" />
 
         <div class="termos-container">
           <input type="checkbox" id="check" name="checkbox" required checked />

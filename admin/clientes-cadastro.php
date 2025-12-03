@@ -1,14 +1,17 @@
 <?php
 
-    require_once "admin/config.inc.php";
+    require_once "config.inc.php";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $id = $_POST["id"];
         $nome = $_POST["cliente"];
-        $cidade = $_POST["cidade"];
-        $estado = $_POST["estado"];
+        $email = $_POST["email"];
+        $numero = $_POST["numero"];
+        $cpf = $_POST["cpf"];
+        $senha = $_POST["senha"];
 
-        $sql = "INSERT INTO clientes (cliente, cidade, estado)
-                VALUES ('$nome', '$cidade', '$estado')";
+        $sql = "INSERT INTO clientes (cliente, email, numero, cpf, senha, id)
+                VALUES ('$nome', '$email', '$numero', '$cpf', '$senha', '$id')";
         if(mysqli_query($conexao, $sql)){
             echo "<h3>Cliente cadastrado com sucesso!</h3>";
             echo "<a href='?pg=clientes-admin'>Voltar</a>";

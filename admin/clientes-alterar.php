@@ -4,16 +4,21 @@
     require_once "config.inc.php";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $nome = $_POST["cliente"];
-        $cidade = $_POST["cidade"];
-        $estado = $_POST["estado"];
         $id = $_POST['id'];
+        $nome = $_POST["cliente"];
+        $email = $_POST["email"];
+        $numero = $_POST["numero"];
+        $cpf = $_POST["cpf"];
+        $senha = $_POST["senha"];
+        
 
 
         $sql = "UPDATE clientes SET
              cliente = '$nome',
-             cidade = '$cidade',
-             estado = '$estado',
+             email = '$email',
+             numero = '$numero',
+             cpf = '$cpf',
+             senha = '$senha',
              WHERE id = '$id'";
              
              
