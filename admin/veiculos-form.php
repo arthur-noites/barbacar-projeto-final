@@ -1,6 +1,6 @@
 <h2>Cadastro de Veículo</h2>
 
-<form action="?pg=veiculos-cadastro" method="post">
+<form action="?pg=veiculos-cadastro" method="post" enctype="multipart/form-data">
 
     <label>Modelo:</label>
     <input type="text" name="modelo" required><br>
@@ -13,6 +13,9 @@
 
     <label>Preço (R$):</label>
     <input type="text" name="preco" required><br>
+    
+    <label>Foto do Veículo:</label>
+    <input type="file" name="foto" required><br>
     
     <input type="submit" value="Cadastrar Veículo">
 
