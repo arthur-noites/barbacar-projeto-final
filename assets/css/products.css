@@ -6,6 +6,11 @@ body {
     position: relative;
 }
 
+/*aqui também*/
+.ratio {
+    overflow: hidden;
+}
+
 .card-container {
     position: relative;
     z-index: 1;
@@ -16,14 +21,14 @@ body {
 
 .card-container:hover {
     z-index: 100;
-    transform: scale(1.0); /* REMOVIDA REDUÇÃO, mantemos o tamanho original */
+    transform: scale(1.0);
 }
 
 .card {
     height: 100%;
     transition: transform 0.3s ease, z-index 0.3s;
     border-radius: 15px;
-    overflow: hidden; /* CORREÇÃO CRÍTICA: Esconde o conteúdo que vaza */
+    overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     border: none;
     position: relative;
@@ -38,7 +43,7 @@ body {
 
 .card-img-container {
     height: 200px;
-    overflow: hidden; /* CORREÇÃO CRÍTICA: Esconde o conteúdo que vaza dentro do container da imagem */
+    overflow: hidden;
     position: relative;
     z-index: 10;
     border-radius: 15px 15px 0 0;
@@ -54,11 +59,10 @@ body {
     transform-origin: center center;
 }
 
+/*aqui foi alterado ok*/
+
 .card-container:hover .card-img-top {
-    transform: scale(1.1); /* AJUSTADO O ZOOM: de 1.5 (muito grande) para 1.1 (suave) */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    z-index: 1; /* AJUSTADO Z-INDEX: Não precisa ser 200, apenas acima do background */
-    position: relative;
+    transform: scale(1.1);
 }
 
 .card-body {
@@ -125,7 +129,7 @@ body {
     letter-spacing: 2px;
     margin-bottom: 10px;
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    color: aliceblue
+    color: aliceblue;
 }
 
 .page-subtitle {
