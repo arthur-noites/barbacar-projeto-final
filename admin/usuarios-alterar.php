@@ -13,8 +13,8 @@
         
 
 
-        $sql = "UPDATE clientes SET
-             cliente = '$nome',
+        $sql = "UPDATE usuarios SET
+             usuario = '$nome',
              email = '$email',
              numero = '$numero',
              cpf = '$cpf',
@@ -25,13 +25,13 @@
              
         if(mysqli_query($conexao, $sql)){
             echo "<h3>Cliente alterado com sucesso!</h3>";
-            echo "<a href='?pg=clientes-admin'>Voltar</a>";
+            echo "<a href='?pg=usuarios-admin'>Voltar</a>";
         }else{
-            echo "<h3>Erro ao alterar cadastro do cliente!</h3>";
+            echo "<h3>Erro ao alterar cadastro do usuário!</h3>";
         }
     }else{
         echo "<h2>Acesso negado!</h2>";
-        echo "<a href='?pg=clientes-admin'>Voltar</a>";
+        echo "<a href='?pg=usuarios-admin'>Voltar</a>";
 
     }
 

@@ -1,5 +1,5 @@
 <h2>Cadastro de Cliente</h2>
-<form action="?pg=clientes-cadastro" method="post">
+<form action="?pg=usuarios-cadastro" method="post">
     <input type="hidden" name="id" value="<?= $id ?>">
     
     <label>Nome:</label>

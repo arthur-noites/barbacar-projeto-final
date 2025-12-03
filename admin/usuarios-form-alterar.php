@@ -4,7 +4,7 @@ require_once 'config.inc.php';
 
 $id = isset($_GET['id']) ? mysqli_real_escape_string($conexao, $_GET['id']) : 0; 
 
-$sql = "SELECT * FROM clientes WHERE id = $id";
+$sql = "SELECT * FROM usuarios WHERE id = $id";
 $resultado = mysqli_query($conexao, $sql); 
 if(mysqli_num_rows($resultado) === 1){
     $dados = mysqli_fetch_array($resultado);
@@ -19,7 +19,7 @@ if(mysqli_num_rows($resultado) === 1){
 ?>
 
 <h2>Editar Cliente ID: <?= $id ?></h2>
-<form action="?pg=clientes-alterar" method="post">
+<form action="?pg=usuarios-alterar" method="post">
     <input type="hidden" name="id" value="<?= $id ?>">
     
     <label>Nome:</label>
